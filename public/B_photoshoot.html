@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nikah Function | Muslim Marriage Contract</title>
+  <link rel="stylesheet" href="functions_style.css">
+</head>
+<body>
+    <div class="header">
+        <img src="ph.png"  style="width:100%;">
+        <div style="color: white; font-size: 80px;" class="centered">Wedding Photoshoot: Where to Click Wedding Photos in Lahore?</div>
+    </div>
+  <main>
+    <section class="content">
+      <h2>Unveiling the Perfect Wedding Photoshoot Spots in Lahore:</h2>
+      <p class="intro">A wedding is a lovely excursion set apart with remarkable minutes; shooting those minutes in immortal photos is a valued custom. In Lahore, the coronary heart of Pakistan, you’ll locate an array of picturesque locations best for a dreamy wedding ceremony photoshoot.</p>
+    </section>
+    <section class="content">
+      <h3>The Majestic Badshahi Mosque:</h3>
+      <p>Start your visual experience on the Badshahi Mosque, a demonstration of Mughal design. Its glory, mind-boggling plans, and extensive patios give exquisite settings to conventional and chic wedding service pictures.</p>
+    </section>
+    <section class="content">
+      <h3> Lahore Fort- A Historical Marvel:</h3>
+      <p>Explore the Lahore Fort, wherein history and romance intertwine. Its walls’ beautiful architecture and plush greenery provide a royal ambiance, perfect for regal and timeless wedding ceremony photography.</p>
+    </section>
+    <section class="content">
+      <h3>Shalimar Gardens- Nature's Embrace:</h3>
+      <p>Step into the quietness of Shalimar Nurseries, flaunting amazing scenes and flowing water abilities. This UNESCO World Legacy Site offers a combination of nature and records, best for catching affection in a grand setting.</p>
+    </section>
+
+   
+    <section class="content">
+      <h3>Conclusion</h3>
+      <p>Lahore, a metropolis steeped in culture and history, gives an array of picturesque locations best for a captivating wedding photoshoot. Whether shooting the essence of historical past sites or embracing the beauty of nature, these locales encapsulate the affection and pleasure of your unique day.</p>
+    </section>
+  </main>
+
+   <!-- Comment Box -->
+   <section class="comments">
+    <h3>Leave a Comment</h3>
+    <input type="text" class="comment-name" placeholder="Your Name">
+    <input type="email" class="comment-email" placeholder="Your Email">
+    <textarea class="comment-input" rows="4" placeholder="Write your comment here..."></textarea>
+    <button class="comment-button" onclick="submitComment()">Submit</button>
+  </section>
+
+  <!-- Comments Section -->
+  <section class="comments-section">
+    <h3>Comments</h3>
+    <div class="comments-container"></div>
+  </section>
+</div>
+
+  <script>function submitComment() {
+    var name = document.querySelector('.comment-name').value;
+    var email = document.querySelector('.comment-email').value;
+    var comment = document.querySelector('.comment-input').value;
+
+    // Check if all fields are filled
+    if (name.trim() === '' || email.trim() === '' || comment.trim() === '') {
+        alert('Please fill in all fields before submitting.');
+        return; // Stop the function if fields are empty
+    }
+    // Indicate that the submission process has started
+    alert('Submitting your comment...');
+
+    fetch('http://localhost:3000/send-email', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ name: name, email: email, comment: comment })
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Network response was not ok'); // Throw an error if response not OK
+        }
+        
+        return response.text();
+    })
+    .then(data => {
+        alert(data); // Show success message
+        // Clear fields after successful submission
+        document.querySelector('.comment-name').value = '';
+        document.querySelector('.comment-email').value = '';
+        document.querySelector('.comment-input').value = '';
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        alert('Failed to submit comment: ' + error.message); // Show error message
+    });
+}
+  </script>
+</body>
+</html>

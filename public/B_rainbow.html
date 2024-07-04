@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nikah Function | Muslim Marriage Contract</title>
+  <link rel="stylesheet" href="functions_style.css">
+</head>
+<body>
+    <div class="header">
+        <img src="rainboow.png"  style="width:100%;">
+        <div style="color: black; font-size: 80px;" class="centered">Rainbow-Themed Birthday : How To Make Fun On Birthday?</div>
+    </div>
+  <main>
+    <section class="content">
+      <h2>Rainbow-Themed Birthday Decor:</h2>
+      <p class="intro">When celebrating special moments in life, few themes are as universally loved as a rainbow-themed birthday party. The allure of vibrant colors, the promise of joy, and the magical atmosphere make it a perfect choice for kids and adults. In this article, we will dive into the enchanting world of rainbow-themed birthday parties and explore how to create a truly unforgettable celebration.</p>
+    </section>
+    <section class="content">
+      <h3>Creating The Perfect Rainbow-Themed Invitation</h3>
+      <p>The excitement of a rainbow-themed birthday party starts with the invitation. Crafting an invitation that reflects the spectrum of colors sets the tone for what’s to come. You can design eye-catching invitations with some creativity that hint at the rainbow magic awaiting your guests.</p>
+    </section>
+   
+    <section class="content">
+      <h3>Venue Transformation</h3>
+      <p>The venue’s transformation is one of the most exciting aspects of a rainbow-themed party. Balloons, streamers, and other decorations in all rainbow colors create an enchanting atmosphere. Imagine a room filled with bursts of color, setting the stage for a celebration full of joy and wonder.</p>
+    </section>
+    <section class="content">
+      <h3>Dressing The Part</h3>
+      <p>Guests are encouraged to embrace the rainbow theme with their outfits and accessories. Everyone can become a part of the colorful magic, from rainbow dresses and shirts to shimmering accessories.</p>
+    </section>
+    <section class="content">
+      <h3>Entertainment And Activities</h3>
+      <p>Engaging activities are a must at any birthday party. Consider setting up a rainbow-themed craft corner where kids can create colorful masterpieces. A rainbow treasure hunt adds a playful twist to the celebration, making it fun and memorable.</p>
+    </section>
+    <section class="content">
+      <h3>Rainbow-Themed Entertainment And Performers</h3>
+      <p>Elevate the excitement with exceptional entertainers like magicians who can weave rainbow-themed magic tricks and face painters who can turn guests into colorful works of art.</p>
+    </section>
+    <section class="content">
+      <h3>Rainbow-Inspired Playlist</h3>
+      <p>Music plays a vital role in any celebration. Curate a playlist that includes songs with colorful references to enhance the rainbow vibe. Live performances and sing-alongs add an extra layer of entertainment.</p>
+    </section>
+    <section class="content">
+      <h3>Conclusion:</h3>
+      <p>A rainbow-themed birthday party celebrates joy, color, and magic. By infusing every element with vibrant hues, creative ideas, and a touch of whimsy, you can create an unforgettable experience for guests of all ages. Whether it’s through decor, treats, entertainment, or cherished moments, the rainbow theme turns any celebration into a dazzling masterpiece.</p>
+    </section>
+  </main>
+
+  <!-- Comment Box -->
+  <section class="comments">
+    <h3>Leave a Comment</h3>
+    <input type="text" class="comment-name" placeholder="Your Name">
+    <input type="email" class="comment-email" placeholder="Your Email">
+    <textarea class="comment-input" rows="4" placeholder="Write your comment here..."></textarea>
+    <button class="comment-button" onclick="submitComment()">Submit</button>
+  </section>
+
+  <!-- Comments Section -->
+  <section class="comments-section">
+    <h3>Comments</h3>
+    <div class="comments-container"></div>
+  </section>
+</div>
+
+  <script>function submitComment() {
+    var name = document.querySelector('.comment-name').value;
+    var email = document.querySelector('.comment-email').value;
+    var comment = document.querySelector('.comment-input').value;
+
+    // Check if all fields are filled
+    if (name.trim() === '' || email.trim() === '' || comment.trim() === '') {
+        alert('Please fill in all fields before submitting.');
+        return; // Stop the function if fields are empty
+    }
+    // Indicate that the submission process has started
+    alert('Submitting your comment...');
+
+    fetch('http://localhost:3000/send-email', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ name: name, email: email, comment: comment })
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Network response was not ok'); // Throw an error if response not OK
+        }
+        
+        return response.text();
+    })
+    .then(data => {
+        alert(data); // Show success message
+        // Clear fields after successful submission
+        document.querySelector('.comment-name').value = '';
+        document.querySelector('.comment-email').value = '';
+        document.querySelector('.comment-input').value = '';
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        alert('Failed to submit comment: ' + error.message); // Show error message
+    });
+}
+  </script>
+</body>
+</html>

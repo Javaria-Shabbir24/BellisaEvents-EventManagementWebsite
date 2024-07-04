@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nikah Function | Muslim Marriage Contract</title>
+  <link rel="stylesheet" href="functions_style.css">
+</head>
+<body>
+    <div class="header">
+        <img src="bday.png"  style="width:100%;">
+        <div style="color: black; font-size: 80px;" class="centered">41 Latest Birthday Party Trends for Kids in 2024</div>
+    </div>
+  <main>
+    <section class="content">
+      <h2>Hassle-Free Birthday Party Ideas:</h2>
+      <p class="intro">The world of birthday Party celebrations is ever-evolving. New themes emerge every year, old ones get a facelift, and some classics stay in style. With 2023 in full swing, let’s delve into the 41 most sought-after birthday party trends that cater to kids, teens, and adults alike.</p>
+    </section>
+    <section class="content">
+      <h3>Sustainable Parties</h3>
+      <p>Eco-friendly is the buzzword. Many are opting for a more environmentally conscious party by reducing waste. This means less single-use plastics and more biodegradable or reusable decorations. Birthday party organizers are now frequently asked for eco-friendly options.</p>
+    </section>
+    <section class="content">
+      <h3>DIY Craft Parties</h3>
+      <p>Allowing guests to create something unique, craft parties are making a significant return, especially among teens and kids. From pottery to painting, it’s all about getting hands-on.</p>
+    </section>
+    <section class="content">
+      <h3>Virtual Reality Parties</h3>
+      <p>A trend particularly popular among teens, virtual reality setups offer a unique experience where guests can play games or travel to virtual destinations.</p>
+    </section>
+    <section class="content">
+      <h3>Outdoor Movie Night</h3>
+      <p>Bring in the big screen outdoors! With a projector and a blank wall or screen, families host classic movie nights in their backyards, with popcorn and comfy seating.</p>
+    </section>
+   
+    <section class="content">
+      <h3>Conclusion</h3>
+      <p>With many birthday party themes and trends, one must find the perfect fit for any age or interest. Remember, it’s not just about following a trend but making memories that last a lifetime. Any of these themes can become a magical celebration with the right party planner, catering, and photography service!</p>
+    </section>
+
+     <!-- Comment Box -->
+  <section class="comments">
+    <h3>Leave a Comment</h3>
+    <input type="text" class="comment-name" placeholder="Your Name">
+    <input type="email" class="comment-email" placeholder="Your Email">
+    <textarea class="comment-input" rows="4" placeholder="Write your comment here..."></textarea>
+    <button class="comment-button" onclick="submitComment()">Submit</button>
+  </section>
+
+  <!-- Comments Section -->
+  <section class="comments-section">
+    <h3>Comments</h3>
+    <div class="comments-container"></div>
+  </section>
+</div>
+
+<script>
+  function submitComment() {
+      var name = document.querySelector('.comment-name').value;
+      var email = document.querySelector('.comment-email').value;
+      var comment = document.querySelector('.comment-input').value;
+  
+      // Check if all fields are filled
+      if (name.trim() === '' || email.trim() === '' || comment.trim() === '') {
+          alert('Please fill in all fields before submitting.');
+          return; // Stop the function if fields are empty
+      }
+      // Indicate that the submission process has started
+      alert('Submitting your comment...');
+  
+      fetch('http://localhost:3000/send-email', {
+          method: 'POST',
+          headers: {
+              'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({ name: name, email: email, comment: comment })
+      })
+      .then(response => {
+          if (!response.ok) {
+              throw new Error('Network response was not ok'); // Throw an error if response not OK
+          }
+          
+          return response.text();
+      })
+      .then(data => {
+          alert(data); // Show success message
+          // Clear fields after successful submission
+          document.querySelector('.comment-name').value = '';
+          document.querySelector('.comment-email').value = '';
+          document.querySelector('.comment-input').value = '';
+      })
+      .catch(error => {
+          console.error('Error:', error);
+          alert('Failed to submit comment: ' + error.message); // Show error message
+      });
+  }
+  </script>
+  </main>
+</body>
+</html>

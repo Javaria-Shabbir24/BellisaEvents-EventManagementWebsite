@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Services</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<style>
+     .navbar-brand img {
+      height: 40px; 
+    }
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #000;
+        color: #fff;
+        margin: 0;
+        padding: 0;
+    }
+    .header {
+        text-align: center;
+        padding: 20px 0;
+    }
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        padding: 20px;
+    }
+    .service {
+        width: 45%;
+        margin-bottom: 20px;
+        padding: 20px;
+        border-radius: 10px;
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+    .service img {
+        width: 100%;
+        border-radius: 10px;
+    }
+    .service-info {
+        padding: 20px;
+    }
+    h2 {
+        margin-top: 0;
+    }
+    p {
+        margin-bottom: 10px;
+    }
+    @media (max-width: 768px) {
+        .service {
+            width: 90%;
+        }
+    }
+</style>
+</head>
+<body>
+    <!--Navbar Code-->
+<!-- Bootstrap Navbar with dark background and dark color-->
+<nav class="navbar navbar-expand-md bg-dark navbar-dark"> 
+    <div class="container">
+      <a class="navbar-brand" href="#"><img src="Logo.png" alt="Logo"></a>
+      <!--presents the collapsed state of navbar on smaller screens-->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!--Enables collapse behaviour-->
+      <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="http://localhost:3000/home.html">Home</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="http://localhost:3000/AboutUs.html">About Us</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="http://localhost:3000/contact.html">Contact Us</a>
+              </li>
+          <li class="nav-item">
+            <a class="nav-link" href="http://localhost:3000/services.html">Our Services</a>
+          </li>
+          
+            <li class="nav-item">
+              <a class="nav-link" href="http://localhost:3000/packages.html">Our Packages</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="http://localhost:3000/blog.html">Blog</a>
+            </li>
+        </ul>
+      </div>  
+    </div>
+  </nav>
+<div class="header">
+    <h1>Our Services</h1>
+</div>
+
+<div class="container">
+    <div class="service">
+        <img src="white-cake-with-burning-candles_23-2147666181.jpg" alt="Birthday Events">
+        <div class="service-info">
+            <h2>Birthday Events</h2>
+            <p>We specialize in creating unforgettable birthday celebrations tailored to your needs. Whether you're planning a small gathering or a grand party, our team will ensure every detail is perfect, from decorations to entertainment, making it a memorable day for you and your guests.</p>
+        </div>
+    </div>
+    <div class="service">
+        <img src="pexels-photo-7944238.jpeg" alt="Graduation Party">
+        <div class="service-info">
+            <h2>Graduation Party</h2>
+            <p>Celebrate your academic achievements with a memorable graduation party organized by us. From selecting the perfect venue to coordinating catering and entertainment, we'll handle all the arrangements so you can focus on enjoying the moment with your friends and family.</p>
+        </div>
+    </div>
+    <div class="service">
+        <img src="altar-with-flowers_1157-732.jpg" alt="Bridal Showers">
+        <div class="service-info">
+            <h2>Bridal Showers</h2>
+            <p>Let us take care of the details while you focus on enjoying the special moments leading up to your big day. Our bridal shower planning services include venue selection, theme design, catering, and entertainment, ensuring a stress-free and memorable event for the bride-to-be and her guests.</p>
+        </div>
+    </div>
+    <div class="service">
+        <img src="free-photo-of-wedding-decoration-of-restaurant-hall.jpeg" alt="Weddings">
+        <div class="service-info">
+            <h2>Weddings</h2>
+            <p>Experience the wedding of your dreams with our expert planning and coordination services. From intimate ceremonies to lavish receptions, we'll work closely with you to bring your vision to life, ensuring every aspect of your special day is executed flawlessly and exceeds your expectations.</p>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

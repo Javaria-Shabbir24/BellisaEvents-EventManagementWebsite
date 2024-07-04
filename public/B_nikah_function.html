@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nikah Function | Muslim Marriage Contract</title>
+  <link rel="stylesheet" href="functions_style.css">
+</head>
+<body>
+    <div class="header">
+        <img src="nkh.jpg"  style="width:100%;">
+        <div style="color: black; font-size: 80px;" class="centered">Nikah Function: A Complete Guide On Islamic Marriage Contract</div>
+    </div>
+  <main>
+    <section class="content">
+      <h2>The Nikah Function</h2>
+      <p class="intro">The Nikah function is a tremendous event in the Islamic way of life, marking the union of two individuals in marriage. It encompasses rituals and customs with deep non-secular, social, and legal significance.</p>
+    </section>
+    <section class="content">
+      <h3>Historical Context</h3>
+      <p >The Nikah function traces its origins back to the time of the Prophet Muhammad (peace be upon him) and holds large cultural and non-secular significance in Islam. It is a sacred settlement among the bride and groom, solemnized through witnesses and a spiritual officiant.</p>
+    </section>
+    <section class="content">
+      <h3>The Role of Wedding Planners and Event Organizers</h3>
+      <p>Expert Guidance:<br>Wedding planners and event organizers are essential in bringing your Nikah function to existence. With their understanding and experience, they could provide priceless steerage and help all through the planning method, ensuring a continuing and pressure-loose experience for you and your family.</p>
+      <p>Customized Solutions:<br>Every couple has unique alternatives and priorities concerning their Nikah rite. Wedding planners and event organizers offer custom-designed solutions tailored to your unique wishes, whether or not you are searching for a traditional party or a current affair.</p>
+      <p>Attention to Detail:<br>From coordinating dealer contracts and managing timelines to overseeing logistics on the day of the event, wedding planners and event organizers pay meticulous attention to elements to ensure that every element of your Nikah characteristic unfolds perfectly.</p>
+      <p>Peace of Mind:<br>By entrusting the planning and execution of your Nikah rite to specialists, you may enjoy peace of mind, understanding that every aspect of your unique day is in successful arms. Wedding planners and occasion organizers deal with the logistical challenges, allowing you to pay attention to celebrating your love and commitment with your associates and loved ones.</p>
+    </section>
+    <section class="content">
+      <h3>Conclusion</h3>
+      <p>In conclusion, the Nikah functions is a time-commemorated culture with deep non-secular, social, and prison significance in Islamic tradition. As couples embark on this journey of marriage, they’re guided by the rituals and customs of the Nikah ceremony, declaring their commitment to each other and their faith. They desire all newlywed couples a lifetime of affection, happiness, and prosperity.</p>
+    </section>
+  </main>
+   <!-- Comment Box -->
+   <section class="comments">
+    <h3>Leave a Comment</h3>
+    <input type="text" class="comment-name" placeholder="Your Name">
+    <input type="email" class="comment-email" placeholder="Your Email">
+    <textarea class="comment-input" rows="4" placeholder="Write your comment here..."></textarea>
+    <button class="comment-button" onclick="submitComment()">Submit</button>
+  </section>
+
+  <!-- Comments Section -->
+  <section class="comments-section">
+    <h3>Comments</h3>
+    <div class="comments-container"></div>
+  </section>
+</div>
+
+  <script>
+    function submitComment() {
+      var name = document.querySelector('.comment-name').value;
+      var email = document.querySelector('.comment-email').value;
+      var comment = document.querySelector('.comment-input').value;
+  
+      // Check if all fields are filled
+      if (name.trim() === '' || email.trim() === '' || comment.trim() === '') {
+          alert('Please fill in all fields before submitting.');
+          return; // Stop the function if fields are empty
+      }
+      // Indicate that the submission process has started
+      alert('Submitting your comment...');
+  
+      fetch('http://localhost:3000/send-email', {
+          method: 'POST',
+          headers: {
+              'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({ name: name, email: email, comment: comment })
+      })
+      .then(response => {
+          if (!response.ok) {
+              throw new Error('Network response was not ok'); // Throw an error if response not OK
+          }
+          
+          return response.text();
+      })
+      .then(data => {
+          alert(data); // Show success message
+          // Clear fields after successful submission
+          document.querySelector('.comment-name').value = '';
+          document.querySelector('.comment-email').value = '';
+          document.querySelector('.comment-input').value = '';
+      })
+      .catch(error => {
+          console.error('Error:', error);
+          alert('Failed to submit comment: ' + error.message); // Show error message
+      });
+  }
+  </script>
+</body>
+</html>

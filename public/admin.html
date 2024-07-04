@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Information</title>
+  <style>
+    body {
+      background-color: #1a1818;
+      color: #333;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    #contacts {
+      margin-top: 20px;
+    }
+
+    .contact-info {
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      margin: 80px;
+      margin-bottom: 20px;
+    
+     
+
+    }
+
+    .contact-info p {
+      margin: 10px 0;
+    }
+
+    hr {
+      border: 0;
+      border-top: 1px solid #eee;
+    }
+
+    h1 {
+      text-align: center;
+      margin-top: 40px;
+      color: #f4efef;
+      
+    }
+
+  </style>
+</head>
+<body>
+  <h1>Booking Information</h1>
+  <div id="contacts"></div>
+
+  <script>
+    // Fetch contact information from the server
+    fetch('/admin/contacts')
+      .then(response => response.json())
+      .then(contacts => {
+        const contactsDiv = document.getElementById('contacts');
+        contacts.forEach(contact => {
+          const contactInfo = document.createElement('div');
+          contactInfo.classList.add('contact-info');
+          contactInfo.innerHTML = `
+            <p><strong>Name:</strong> ${contact.firstName} ${contact.lastName}</p>
+            <p><strong>Email:</strong> ${contact.email}</p>
+            <p><strong>Phone Number:</strong> ${contact.phoneNumber}</p>
+            <p><strong>Address:</strong> ${contact.address}</p>
+            <p><strong>Date:</strong> ${contact.date}</p>
+            <p><strong>Event Type:</strong> ${contact.eventType}</p>
+            <p><strong>Service Type:</strong> ${contact.serviceType}</p>
+            <p><strong>City:</strong> ${contact.city}</p>
+            <p><strong>Message:</strong> ${contact.message}</p>
+          `;
+          contactsDiv.appendChild(contactInfo);
+        });
+      })
+      .catch(error => console.error('Error fetching contacts:', error));
+  </script>
+</body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nikah Function | Muslim Marriage Contract</title>
+  <link rel="stylesheet" href="functions_style.css">
+</head>
+<body>
+ 
+    <div class="header">
+        <img src="destination.png"  style="width:100%;">
+        <div style="color: white; font-size: 80px;" class="centered">The Pros and Cons of Having a Destination Wedding</div>
+    </div>
+  <main>
+    <section class="content">
+      <h2>A Complete Guide About Destination Wedding:</h2>
+      <p class="intro">Are you dreaming of a destination wedding ceremony greater than only a rite but an unforgettable journey? Destination weddings have become increasingly famous in recent years, presenting couples with a hazard to trading vows in beautiful, wonderful places. However, like every wedding choice, there are advantages and downsides. In this article, we will discover the pros and cons of having a destination wedding ceremony occasion and touch on the role of a wedding planner, event manager, and inn and venue sourcing in making your dream wedding come true.</p>
+    </section>
+    <section class="content">
+      <h3>Pros of a Destination Wedding</h3>
+      <p>1- Unique and Memorable Setting:
+        One of the most great benefits of a destination wedding ceremony is the possibility of mentioning “I do” in a unique and remarkable place. Whether it’s a picturesque beach, a charming European city, or a rustic nation-state, your wedding ceremony backdrop may be beautiful and unforgettable. The backdrop can regularly function in both your rite and reception venue, reducing the need for additional ornament and costs.
+        
+        2- Intimate Gathering:
+        Destination weddings often lead to smaller, extra intimate guest lists. With the gap and ability fees worried, only near pals and their own families tend to attend. This creates an additional non-public and meaningful enjoyment, allowing you to spend high-quality time with your family at some point during the birthday celebration.
+        
+        3- Built-in Honeymoon:
+        Your vacation spot wedding ceremony can double as your honeymoon place, saving you money and time on travel. After the marriage, you could enjoy your first days as a married couple in a romantic and extraordinary destination.
+        
+        4- Stress Reduction with a Wedding Planner:
+        Hiring a local wedding planner with information about vacation spot weddings can lessen stress. A wedding planner experienced in event management can manage the logistics, coordinate with local vendors, and ensure the whole thing runs smoothly. Their know-how of the area can be worthwhile in finding exceptional venues and suppliers, making your dream wedding ceremony a fact.
+        
+        5- Cultural Experience:
+        Destination weddings regularly offer a unique cultural experience for you and your visitors. You can incorporate nearby traditions, cuisine, and customs into your wedding ceremony, creating a rich and remarkable birthday celebration.
+        
+        6- Stunning Photos and Videos:
+        The picturesque settings of vacation spot weddings make for lovely images and videography. Your wedding ceremony album and video will be packed with breathtaking backdrops and candid moments you will always cherish.</p>
+    </section>
+    <section class="content">
+      <h3>Cons of a Destination Wedding:</h3>
+    <p>
+        1- Cost:
+While vacation spot weddings can be extra intimate, they can also be expensive. Travel and lodging charges on your guests can upload up fast. In addition to these costs, vacation spot weddings may require you to pay for additional wedding ceremony planners and event management offerings to coordinate everything from a distance.
+
+2- Guest Attendance:
+Only some of your loved ones can attend due to the destination’s distance and costs. This can be challenging, especially if you have close friends or family who cannot make the trip.
+
+3- Legal Requirements:
+Destination weddings can also have complicated felony requirements, along with acquiring marriage licenses or fulfilling residency necessities within the chosen area. These may be time-consuming and require more fantastic plans and paperwork.
+
+4- Limited Control:
+Planning a wedding from afar may take much work because you want extra control over the details. You may also need to depend heavily on your preferred wedding ceremony planner and event management team to execute your vision as you would like.
+
+5- Unfamiliar Suppliers:
+Unless you’ve got a relied-on community inside the vacation spot, you may need to work with providers and companies you’ve never met. This may be a venture, as you’ll have a specific degree of familiarity and accept it as accurately as you will with nearby suppliers.
+
+6- Language Barriers:
+Language boundaries can create conversation challenges when dealing with local carriers and planners. Misunderstandings can result in issues that are tough to clear up from a distance
+
+    </p>
+    </section>
+    <section class="content">
+      <h3>Conclusion</h3>
+      <p>Destination weddings offer a unique and memorable enjoy but have pros and cons. It’s essential to weigh these elements carefully and consider the role of a marriage planner and occasion management in making your vacation spot wedding ceremony successful. Proper planning and help can make your dream wedding in a much-off paradise a beautiful truth.</p>
+    </section>
+  </main>
+   <!-- Comment Box -->
+   <section class="comments">
+    <h3>Leave a Comment</h3>
+    <input type="text" class="comment-name" placeholder="Your Name">
+    <input type="email" class="comment-email" placeholder="Your Email">
+    <textarea class="comment-input" rows="4" placeholder="Write your comment here..."></textarea>
+    <button class="comment-button" onclick="submitComment()">Submit</button>
+  </section>
+
+  <!-- Comments Section -->
+  <section class="comments-section">
+    <h3>Comments</h3>
+    <div class="comments-container"></div>
+  </section>
+</div>
+
+  <script>
+    function submitComment() {
+      var name = document.querySelector('.comment-name').value;
+      var email = document.querySelector('.comment-email').value;
+      var comment = document.querySelector('.comment-input').value;
+  
+      // Check if all fields are filled
+      if (name.trim() === '' || email.trim() === '' || comment.trim() === '') {
+          alert('Please fill in all fields before submitting.');
+          return; // Stop the function if fields are empty
+      }
+      // Indicate that the submission process has started
+      alert('Submitting your comment...');
+  
+      fetch('http://localhost:3000/send-email', {
+          method: 'POST',
+          headers: {
+              'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({ name: name, email: email, comment: comment })
+      })
+      .then(response => {
+          if (!response.ok) {
+              throw new Error('Network response was not ok'); // Throw an error if response not OK
+          }
+          
+          return response.text();
+      })
+      .then(data => {
+          alert(data); // Show success message
+          // Clear fields after successful submission
+          document.querySelector('.comment-name').value = '';
+          document.querySelector('.comment-email').value = '';
+          document.querySelector('.comment-input').value = '';
+      })
+      .catch(error => {
+          console.error('Error:', error);
+          alert('Failed to submit comment: ' + error.message); // Show error message
+      });
+  }
+  </script>
+</body>
+</html>

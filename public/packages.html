@@ -1,0 +1,318 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <title>Wedding Website</title>
+    <style>
+       body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.navbar-brand img {
+      height: 40px; 
+    }
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 80px;
+    position: relative;
+}
+
+.hero h2 {
+    font-size: 50px;
+    margin-bottom: 10px;
+    margin-top: 300px;
+    color: white;
+}
+
+.hero p {
+    margin-top: 170px;
+    background-color: rgba(172, 66, 177, 0.449);
+    font-size: 20px;
+    margin-bottom: 20px;
+    color:rgb(249, 249, 249);
+    font-weight: bolder;
+}
+.hero img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%; /* Cover the entire width of the screen */
+            height: auto; /* Maintain aspect ratio */
+            z-index: -1;
+            height: 180%;
+        }
+/* Packages Section */
+.con {
+    background-color: black;
+    color: white;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 25px;
+}
+
+.menu {
+    width: calc(30% - 20px);
+    margin-bottom: 20px;
+}
+
+.menu-item1 {
+    padding: 10px;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+    background-color: rgb(213, 157, 52);
+}
+.menu-item2{
+    padding: 10px;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+    background-color: rgb(218, 106, 54);
+}
+.menu-item3{
+    padding: 10px;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+    background-color: rgb(16, 170, 101);
+}
+.menu-item h2 {
+    color: red;
+    text-align: left;
+}
+
+.menu-item h3 {
+    color: greenyellow;
+}
+
+.menu-item ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu-item li {
+    padding: 5px;
+}
+.bookb{
+    justify-content: center;
+    text-align: center;
+    margin-top: 10px;
+    padding-top: 20px;
+}
+
+button {
+    background-color: #1a1919;
+    color: rgb(231, 116, 55);
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 15px;
+  
+}
+
+h1 {
+    text-align: center;
+    color: rgb(231, 116, 55);
+}
+
+/* Media Queries */
+
+@media screen and (min-width: 769px) {
+    .menu-icon {
+        display: none;
+    }
+
+    /* Display the navbar ul on large screens */
+    .navbar ul {
+        display: flex !important;
+    }
+}
+
+
+    
+
+   
+
+    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 768px) {
+           
+
+            .menu-icon {
+                display: block;
+                float: right;
+                height: 25px;
+                width: 30px;
+            }
+
+            
+        }
+    .menu-icon {
+        display: block;
+        float:right;
+        height: 25px;
+        width:30px;
+    }
+    .menu {
+    width: 100%;
+    margin-bottom: 20px;
+}
+}
+
+
+
+    </style>
+</head>
+<body>
+
+
+
+   <!--Navbar Code-->
+<!-- Bootstrap Navbar with dark background and dark color-->
+<nav class="navbar navbar-expand-md bg-dark navbar-dark"> 
+    <div class="container">
+      <a class="navbar-brand" href="#"><img src="Logo.png" alt="Logo"></a>
+      <!--presents the collapsed state of navbar on smaller screens-->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!--Enables collapse behaviour-->
+      <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="http://localhost:3000/home.html">Home</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="http://localhost:3000/AboutUs.html">About Us</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="http://localhost:3000/contact.html">Contact Us</a>
+              </li>
+          <li class="nav-item">
+            <a class="nav-link" href="http://localhost:3000/services.html">Our Services</a>
+          </li>
+          
+            <li class="nav-item">
+              <a class="nav-link" href="http://localhost:3000/packages.html">Our Packages</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="http://localhost:3000/blog.html">Blog</a>
+            </li>
+        </ul>
+      </div>  
+    </div>
+  </nav>
+  <!--Navbar Code Ends Here-->
+
+
+   
+    <section class="hero">
+        
+        <main>
+            
+                <img src="wedd.png" alt="Wedding Package">
+                <h2>Our Packages</h2>
+                <p>HOME > PACKAGES</p>  
+            </section>
+            <div class="con">
+                <h1>Our Special Offers</h1>
+                <div class="container">
+                    <div class="menu">
+                        <div class="menu-item1">
+                            <h6 style="background-color: orange; color: aliceblue; float: left;">per head</h6>
+                            <h2 style="color: red; text-align: left;">Silver</h2>
+                            <h3 style="color:greenyellow">1500PKR</h3>
+                            <ul>
+                                <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="green" d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" /></svg>One Dish Chicken Menu</li>
+                                <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="green" d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" /></svg>Complete Menu Setup</li>
+                                <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="green" d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" /></svg>All Type Of Crockery</li>
+                                <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="green" d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" /></svg>Best Carpeted Environment</li>
+                                <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="green" d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" /></svg>Professional Waiter Staff</li>
+                                <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="green" d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" /></svg>Event Lightening facilities</li>
+                                <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="green" d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" /></svg>VIP Lounges for 50 Persons</li>
+                                <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="green" d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" /></svg>Generator + Fuel</li>
+                                <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="green" d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" /></svg>Event Planner</li> </ul>
+                        
+                        </div>
+                    </div>
+                    <div class="menu">
+                        <div class="menu-item2">
+                            <h6 style="background-color:orange; color: aliceblue; float: left;">per head</h6>
+                            <h2 style="color: red; text-align: left;">Gold</h2>
+                            <h3 style="color:greenyellow">2000PKR</h3>
+                            <ul>
+                                <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="green" d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" /></svg>One Dish Mutton Menu</li>
+                                <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="green" d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" /></svg>Complete Menu Setup</li>
+                                <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="green" d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" /></svg>All Type Of Crockery</li>
+                                <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="green" d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" /></svg>Best Carpeted Environment</li>
+                                <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="green" d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" /></svg>Professional Waiter Staff</li>
+                                <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="green" d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" /></svg>Event Lightening facilities</li>
+                                <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="green" d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" /></svg>VIP Lounges for 80 Persons</li>
+                                <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="green" d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" /></svg>Generator + Fuel</li>
+                                <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="green" d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" /></svg>Event Planner</li> </ul>
+                           
+                        </div>
+                    </div>
+                    <div class="menu">
+                        <div class="menu-item3">
+                            <h6 style="background-color: orange; color: aliceblue; float: left;">per head</h6>
+                            <h2 style="color: red; text-align: left;">Diamond</h2>
+                            <h3 style="color:greenyellow">2500PKR</h3>
+                            <ul>
+                                <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="green" d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" /></svg>Multi Dishes Menu</li>
+                                <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="green" d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" /></svg>Complete Menu Setup</li>
+                                <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="green" d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" /></svg>All Type Of Crockery</li>
+                                <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="green" d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" /></svg>Best Carpeted Environment</li>
+                                <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="green" d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" /></svg>Professional Waiter Staff</li>
+                                <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="green" d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" /></svg>Event Lightening facilities</li>
+                                <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="green" d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" /></svg>VIP Lounges for 80 Persons</li>
+                                <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="green" d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" /></svg>Generator + Fuel</li>
+                                <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="green" d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" /></svg>Event Planner</li> </ul>
+                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <div class="bookb">
+            <button id="bookNowBtn">Book Now</button>
+
+        </div>
+    </body>
+    <script>
+        
+    document.getElementById("bookNowBtn").addEventListener("click", function() {
+        
+        window.location.href = "http://localhost:3000/contact.html";
+    });
+
+
+    function toggleMenu() {
+        var navbar = document.getElementById("navbarSupportedContent");
+        if (navbar.classList.contains("show")) {
+            navbar.classList.remove("show");
+        } else {
+            navbar.classList.add("show");
+        }
+    }
+</script>
+    </script>
+    </html>
+    
+
+   

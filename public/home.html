@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home | Bellissa Events</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <style>
+
+.navbar-brand img {
+      height: 40px; 
+    }
+    /* Style for social media icons */
+    .social-icons {
+      list-style-type: none;
+      padding: 0;
+    }
+    .social-icons li {
+      display: inline-block;
+      margin-right: 10px;
+    }
+   
+    .custom-div {
+      margin: 0;
+      padding: 20px;
+    }
+    .custom-image {
+      position: relative;
+      overflow: hidden;
+    }
+    .custom-image img {
+      width: 100%;
+      height: 100px;
+      display: block;
+
+    }
+    .city1,.city2,.city3,.art1,.art2,.art3,.art4,.art5,.art6,.art7,.art8,.section1,.section2,.section3,.section4,.section5,.section6,.section7,.section8,.section9,.section10,.section11,.section12{
+      border: 3px solid black;
+      border-radius:20px;
+      height: 120px;
+      width: 210px;
+      padding-top: 15px;
+      margin-left: 25px ;
+      margin-right: 10px;
+      margin-top: 20px;
+      background-size: cover;
+      background-position: center; 
+      background-repeat: no-repeat;
+      color: white;
+    }
+    .Footersec1,.Footersec2,.Footersec3,.Footersec4{
+      margin-left: 25px ;
+      margin-top: 10px;
+      padding: 5px;
+      color: white;
+        }
+    .city1,.city2,.city3{
+      height: 350px;
+      width: 280px;
+      padding: 4px;
+      padding-top: 25px !important;
+      border-radius: 0% !important;
+      margin-left: 40px !important;
+      border: 10px solid white;
+    }
+    .city1{
+      background-color: rgb(57, 42, 121);
+    }
+    .city1:hover{
+      background-image: url(lahore.png);
+    }
+    .city2{
+      background-color: rgb(11, 39, 8);
+    }
+    .city2:hover{
+      background-image: url(islamabad.png);
+    }
+    .city3{
+      background-color: rgb(46, 13, 18);
+    }
+    .city3:hover{
+      background-image: url(gujranwala.png);
+    }
+    .art1,.art2,.art3,.art4,.art5,.art6,.art7,.art8{
+      
+      margin-left: 50px !important;
+      border-radius: 85px;
+      height: 170px;
+      width: 170px;
+    }
+    .art1{
+      background-image: url('atifaslam.png'); 
+    }
+    .art2{
+      background-image: url('umairjaswal.png'); 
+    }
+    .art3{
+      background-image: url('asimazhar.png'); 
+    }
+    .art4{
+      background-image: url('aimabaig.png'); 
+    }
+    .art5{
+      background-image: url('sahiralibagga.png'); 
+    }
+    .art6{
+      background-image: url('hadiqakiani.png'); 
+    }
+    .art7{
+      background-image: url('shaegill.png'); 
+    }
+    .art8{
+      background-image: url('falakshabbir.png'); 
+    }
+    .section1{
+      background-image: url('dj.png'); 
+      
+    }
+    .section2{
+      background-image: url('sports.jpg'); 
+      
+    }
+    .section3{
+      background-image: url('concert.png'); 
+      
+    }
+    .section4{
+      background-image: url('birthday.png'); 
+      
+    }
+    .section5{
+      background-image: url('cocktail.png'); 
+      
+    }
+    .section6{
+      background-image: url('babyshower.png'); 
+      
+    }
+    .section7{
+      background-image: url('fashionshow.png'); 
+      
+    }
+    .section8{
+      background-image: url('galadinner.png'); 
+      
+    }
+    .section9{
+      background-image: url('festivals.png'); 
+      
+    }
+    .section10{
+      background-image: url('privateparties.png'); 
+      
+    }
+    .section11{
+      background-image: url('wedding.png'); 
+      
+    }
+    .section12{
+      background-image: url('meeting.png'); 
+      
+    }
+    .image-title {
+      position: absolute;
+      top: 35%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: black;
+      font-weight: 400;
+      font-size: 25px;
+      text-align: center;
+    }
+    .description{
+        margin-top: 20px;
+        margin-right: 30px;
+        border:5px solid blueviolet!important;
+    }
+
+    .contactbutton,.contactbutton1{
+        background-color: white;
+        color: blueviolet;
+        font-size: 20px;
+        border:3px solid blueviolet;
+        border-radius: 10px;
+    }
+    .contactbutton{
+      margin: 20px;
+        margin-left: 40%;
+    }
+    .third-div,.fourth-div{
+        
+        text-align: center;
+    }
+    .fourth-div{
+        margin-top: 20px;
+        opacity: 0; /* Initially hide the divs */
+        transform: translateY(50px); /* Move the divs down */
+        transition: opacity 0.5s ease, transform 0.5s ease; /* Add transition effect */
+
+    }
+    .fourth-div.active {
+    opacity: 1; /* Show the divs */
+    transform: translateY(0); /* Move the divs back to their original position */
+}
+    .artists{
+      margin-top:40px;
+      padding: 20px;
+    }
+    @media (min-width: 768px) { 
+      .custom-image img {
+        height: 300px; 
+      }
+    }
+    @media (min-width: 375px) { 
+      .section1,.section2,.section3,.section4,.section5,.section6,.section7,.section8,.section9,.section10,.section11,.section12{
+     margin-left: 20%;
+      }
+      .art1,.art2,.art3,.art4,.art5,.art6,.art7,.art8{
+        margin-left: 25% !important;
+      }
+      .description{
+        margin-left: 40px;
+      }
+      }
+      
+    
+  </style>
+</head>
+<div>
+    <!--Navbar Code-->
+<!-- Bootstrap Navbar with dark background and dark color-->
+<nav class="navbar navbar-expand-md bg-dark navbar-dark"> 
+  <div class="container">
+    <a class="navbar-brand" href="#"><img src="Logo.png" alt="Logo"></a>
+    <!--presents the collapsed state of navbar on smaller screens-->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <!--Enables collapse behaviour-->
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="http://localhost:3000/home.html">Home</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="http://localhost:3000/AboutUs.html">About Us</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="http://localhost:3000/contact.html">Contact Us</a>
+            </li>
+        <li class="nav-item">
+          <a class="nav-link" href="http://localhost:3000/services.html">Our Services</a>
+        </li>
+        
+          <li class="nav-item">
+            <a class="nav-link" href="http://localhost:3000/packages.html">Our Packages</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="http://localhost:3000/blog.html">Blog</a>
+          </li>
+          <li>
+            <a href="/login.html" class="nav-link" id="logoutBtn">
+              <i class="fas fa-sign-out-alt"></i> 
+          </a>
+          </li>
+          
+      </ul>
+    </div>  
+  </div>
+</nav>
+<!--Navbar Code Ends Here-->
+<!--Next Sections-->
+<!--Full width container-->
+<div class="container-fluid" style="background-color: black">
+    <div class="row">
+      <div class="col-12"><!--spans full width of the column-->
+        <div class="custom-div custom-image">
+          <img src="party.png" alt="MainImage">
+          <div class="image-title"><i>Bellissa Events</i></div>
+        </div>
+      </div>
+    </div>
+    <!--about us description and image-->
+    <div class="row">
+        <div class="col-md-6">
+          <div class="custom-div custom-image">
+            <img src="disco.png" alt="Disco Image">
+          </div>
+        </div>
+        <div class="col-md-6 ">
+          <div style="color: white; !important" class="custom-div description">
+            Welcome to the Belissa Events and Artist Management! If you’re looking for a party planner that’s going to be organized an unforgettable event, then you’ve come to the right spot. We’re not your average event planners – we’re a team of artists, DJs, and qawals who know how to get the party started and keep it going all night long. We’ve got everything you need to make your event one for the history books – from the perfect wedding to a rocking birthday Party Planner.
+          </div>
+          
+        </div>
+      </div>
+
+<!--Statistics div-->
+      <div class="row third-div">
+        <div class="col-sm-12 col-md-4">
+          <div style="color: white; !important" class="child-div">
+            <h1 style="color: blueviolet;">1000+</h1>
+            Projects
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-4">
+          <div style="color: white; !important" class="child-div">
+            <h1 style="color: blueviolet;">500+</h1>
+            Clients
+          </div>
+          </div>
+        
+        <div  class="col-sm-12 col-md-4">
+          <div style="color: white; !important" class="child-div">
+            <h1 style="color: blueviolet;">100+</h1>
+            Awards
+          </div>
+          </div>
+        </div>       
+     
+    
+
+    <div class="row fourth-div">
+        <div class="col-sm-12 col-md-12">
+          <div class="child-div">
+            <h1 style="color:  blueviolet;">Events We Manage</h1>
+            
+          </div>
+        </div>
+        </div>
+        <div class="row fourth-div">
+          <div class="col-md-3 col-sm-6">
+            <div class="section1">
+              <div ><h3>DJ Parties</h3></div>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6">
+            <div class="section2">
+              <div ><h3>Sports Events</h3></div>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6">
+            <div class="section3">
+              <div><h3>Musical Concerts</h3></div>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6">
+            <div class="section4">
+              <div><h3>Birthdays</h3></div>
+            </div>
+          </div>
+        </div>
+      
+        <div class="row fourth-div">
+          <div class="col-md-3 col-sm-6">
+            <div class="section5">
+              <div><h3>Cocktail Parties</h3></div>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6">
+            <div class="section6">
+              <div><h3>Baby Shower</h3></div>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6">
+            <div class="section7">
+              <div><h3>Fashion Show</h3></div>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6">
+            <div class="section8">
+              <div><h3>Gala Dinner</h3></div>
+            </div>
+          </div>
+        </div>
+      
+        <div class="row fourth-div">
+          <div class="col-md-3 col-sm-6">
+            <div class="section9">
+              <div><h3>Festivals</h3></div>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6">
+            <div class="section10">
+              <div><h3>Private Parties</h3></div>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6">
+            <div class="section11">
+              <div><h3>Weddings</h3></div>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6">
+            <div class="section12">
+              <div><h3>Meetings and Conferences</h3></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-12">
+            <div class="artists">
+              <div style="text-align: center; color:  blueviolet;"><h1>Artists Management</h1>
+              <p>Hey ! If you want to make your event more memorable or special with your favorite artist. Then what are you waiting for?  Just tell us about your favorite artist and we will provide you.</p>
+              
+        
+            </div>
+            </div>
+          </div>
+        </div>
+        <div style="color: white; !important" class="row fourth-div">
+          <div class="col-md-3 col-sm-6">
+            <div class="art1"></div>
+            <div><h3>Atif Aslam</h3></div>
+          </div>
+          <div class="col-md-3 col-sm-6">
+            <div class="art2">
+            </div>
+            <div><h3>Umair Jaswal</h3></div>
+          </div>
+          <div class="col-md-3 col-sm-6">
+            <div class="art3">
+            </div>
+            <div><h3>Asim Azhar</h3></div>
+          </div>
+          <div class="col-md-3 col-sm-6">
+            <div class="art4">
+            </div>
+            <div><h3>Aima Baig</h3></div>
+          </div>
+        </div>
+        <div style="color: white; !important" class="row fourth-div">
+          <div class="col-md-3 col-sm-6">
+            <div class="art5"></div>
+            <div><h3>Sahir Ali Bagga</h3></div>
+          </div>
+          <div class="col-md-3 col-sm-6">
+            <div class="art6">
+            </div>
+            <div><h3>Hadiqa Kiana</h3></div>
+          </div>
+          <div class="col-md-3 col-sm-6">
+            <div class="art7">
+            </div>
+            <div><h3>Shae Gill</h3></div>
+          </div>
+          <div class="col-md-3 col-sm-6">
+            <div class="art8">
+            </div>
+            <div><h3>Falak Shabbir</h3></div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <div >
+              <br><br>
+              <div style="text-align: center; color:  blueviolet;"><h1>Our Cities</h1> </div>
+            </div>
+          </div>
+        </div>
+        <div class="row fourth-div">
+          <div class="col-md-4 col-sm-6">
+            <div class="city1">
+            <div><h3>Lahore</h3>
+            <p>Join us at our Lahore branch for a vibrant array of events that capture the essence of this historical city. From cultural festivals celebrating the rich heritage of Punjab to contemporary art exhibitions and thrilling music concerts</p></div>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6">
+            <div class="city2">
+              <div><h3>Islamabad</h3>
+              <p>Immerse yourself in the lively events hosted by our Islamabad branch, set against the stunning backdrop of the capital city's lush greenery and modern architecture. </p></div>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6">
+            <div class="city3">
+              <div><h3>Gujranwala</h3>
+              <p>Discover the charm of Gujranwala through our exciting lineup of events at our branch in this bustling city.  From energetic sports tournaments to engaging community initiatives and festive celebrations.</p></div>
+            </div>
+          </div>
+        </div>
+         <br><br>
+        <div class="row footer" style="background-color: rgb(48, 42, 42);">
+          <div class="col-md-3 col-sm-6">
+            <div class="Footersec1">
+              <div ><p>Welcome to Belissa Events Management Company. We are one of the leading and best  Event Management Companies in Pakistan. We are having a complete solution for Designing,  Decoration, and Catering Services.</p></div>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6">
+            <div class="Footersec2">
+              <div><h4>Quick Links</h4>
+              <br>
+            <!-- Social media icons -->
+<ul class="social-icons">
+  <li><a href="https://www.facebook.com/people/Belissa-Events/100076332005289/">Facebook | Bellissa Events <i class="fab fa-facebook"></i></a></li>
+  <li><a href="https://twitter.com/BelissaEvents">Twitter | Bellissa Events <i class="fab fa-twitter"></i></a></li>
+  <li><a href="https://www.instagram.com/belissa_events/">Instagram | Bellissa Events <i class="fab fa-instagram"></i></a></li>
+  
+</ul></div>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6">
+            <div class="Footersec3">
+              <div><h4>Get In Touch</h4>
+              <p><i class="fas fa-map-marker-alt address-icon"></i><b> Address</b> <br>
+                Lawrence Road, Lahore <br>
+                <i class="fas fa-phone contact-icon"></i><b> Contact</b> <br>
+                +92-308-8004808 <br>
+                <i class="fas fa-envelope email-icon"></i><b> Email</b> <br>
+                Info@belissaevents.com</p></div>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6">
+            <div class="Footersec4">
+              <div><!-- Clickable Google Map -->
+                <h3>Location</h3>
+                <a href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3403.707761787937!2d-118.24343578488675!3d34.05223498057517!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2c75ddc27da13%3A0xe22fdf3f5b14fbc!2sLos%20Angeles%2C%20CA%2C%20USA!5e0!3m2!1sen!2sin!4v1636321172387!5m2!1sen!2sin" target="_blank">
+                  <iframe width="100%" height="90%" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3399.8876948488264!2d74.32285507486147!3d31.554696574198186!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391905c1d0ca60a7%3A0x22bc8014d60793d8!2sBelissa%20Events!5e0!3m2!1sen!2sin!4v1711726799382!5m2!1sen!2sin" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                </a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+    </div>
+</div>
+<script>
+//redirect to contact page 
+    function redirectToContactPage() {
+      window.location.href = 'http://localhost:3000/contact.html';
+    }
+    //sliding transition
+    // JavaScript to add class and trigger sliding animation
+document.addEventListener('DOMContentLoaded', function() {
+    var fourthDivs = document.querySelectorAll('.fourth-div');
+    // Function to add 'active' class to divs after a delay
+    function activateDivs() {
+        fourthDivs.forEach(function(div, index) {
+            setTimeout(function() {
+                div.classList.add('active');
+            }, index * 500); // delay
+        });
+    }
+
+    // Calling the function after a short delay
+    setTimeout(activateDivs, 1500); //delay according to my page load time
+});
+
+</script>
+</body>
+</html>

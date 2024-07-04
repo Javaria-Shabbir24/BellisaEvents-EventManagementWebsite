@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+        }
+
+
+        .navbar-brand img {
+      height: 40px; 
+    }
+        .contact-info {
+            text-align: left;
+            padding: 20px;
+            color: white; /* Set text color to white */
+        }
+        .contact-info p{
+            font-size: 35px;
+        }
+        .contact-info h2 {
+            font-size: 50px;
+            margin-bottom: 5px;
+        }
+        .contact-info a {
+            text-decoration: none;
+            color: white;
+        }
+        header {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            color: white;
+            text-align: center;
+            height: 50vh;
+        }
+        header h1 {
+            font-size: 50px;
+            margin: 0;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        header button {
+            background-color: #df1616;
+            border-radius: 15px;
+            color: white;
+            padding: 15px 20px;
+            border: none;
+            cursor: pointer;
+        }
+        .con1 img{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: auto;
+            z-index: -1;
+            height: 60%;
+        }
+        .con2 {
+            background-color: #000000;
+            display: flex;
+            font-size: 25px;
+            justify-content: space-between;
+            padding: 20px;
+            color: white; /* Set text color to white */
+        }
+        .hrr {
+            border-color:#b9221d;
+            border-width: 2px;
+        }
+        .form-container {
+            width: 50%;
+            padding: 20px;
+            border: 1px solid #ccc;
+            color: white; /* Set text color to white */
+        }
+        .form-container label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        .form-container input,
+        .form-container select,
+        .form-container textarea {
+            width: calc(100% - 22px); /* Adjusted width */
+            padding: 10px;
+            border: 1px solid #ccc;
+            margin-bottom: 10px;
+            font-size: 25px;
+        }
+        @media only screen and (max-width: 600px) {
+            .con2 {
+                flex-direction: column;
+                align-items: center; 
+            }
+            .form-container {
+                width: 90%;
+                margin-top: 20px;
+            }
+            .contact-info {
+                margin-top: 20px;
+                text-align: center;
+            }
+        }
+    </style>
+    <script>
+        function validateForm() {
+            var fname = document.getElementById("fname").value;
+            var lname = document.getElementById("lname").value;
+            var phone = document.getElementById("phone").value;
+            var email = document.getElementById("email").value;
+            var address = document.getElementById("address").value;
+            var date = document.getElementById("date").value;
+            var eventType = document.getElementById("event").value;
+            var serviceType = document.getElementById("service").value;
+            var city = document.getElementById("city").value;
+            var message = document.getElementById("message").value;
+    
+            // Regular expressions for validation
+            var phoneRegex = /^\d{11}$/; // Matches 11 digits
+            var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Matches valid email format
+    
+            // Validation checks
+            if (fname.trim() === "") {
+                alert("Please enter your first name.");
+                return false;
+            }
+            if (lname.trim() === "") {
+                alert("Please enter your last name.");
+                return false;
+            }
+            if (!phoneRegex.test(phone)) {
+                alert("Please enter a valid 11-digit phone number.");
+                return false;
+            }
+            if (!emailRegex.test(email)) {
+                alert("Please enter a valid email address.");
+                return false;
+            }
+            if (address.trim() === "") {
+                alert("Please enter your address.");
+                return false;
+            }
+            if (date.trim() === "") {
+                alert("Please select the date of the event.");
+                return false;
+            }
+            if (eventType === "") {
+                alert("Please select the type of event.");
+                return false;
+            }
+            if (serviceType === "") {
+                alert("Please select the type of package.");
+                return false;
+            }
+            if (city.trim() === "") {
+                alert("Please enter your city.");
+                return false;
+            }
+            if (message.trim() === "") {
+                alert("Please enter your message.");
+                return false;
+            }
+    
+            return true; // Form is valid
+        }
+    </script>
+    
+</head>
+<body>
+
+      <!--Navbar Code-->
+<!-- Bootstrap Navbar with dark background and dark color-->
+<nav class="navbar navbar-expand-md bg-dark navbar-dark"> 
+    <div class="container">
+      <a class="navbar-brand" href="#"><img src="Logo.png" alt="Logo"></a>
+      <!--presents the collapsed state of navbar on smaller screens-->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!--Enables collapse behaviour-->
+      <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="http://localhost:3000/home.html">Home</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="http://localhost:3000/AboutUs.html">About Us</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="http://localhost:3000/contact.html">Contact Us</a>
+              </li>
+          <li class="nav-item">
+            <a class="nav-link" href="http://localhost:3000/services.html">Our Services</a>
+          </li>
+          
+            <li class="nav-item">
+              <a class="nav-link" href="http://localhost:3000/packages.html">Our Packages</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="http://localhost:3000/blog.html">Blog</a>
+            </li>
+        </ul>
+      </div>  
+    </div>
+  </nav>
+
+
+
+    <div class="con1">
+        <header>
+            <img src="phone.jpeg" alt="Wedding Package">
+            <h1 style="color: #df1616; text-shadow: #3d0605;">Contact Us</h1>
+         
+        </header>
+    </div>
+    <div class="con2">
+        <div class="form-container">
+            <form action="/contact" method="post" onsubmit="return validateForm()">
+
+                <h1 style="color: rgb(219, 5, 134);">Contact Form</h1>
+                <label for="fname">First Name:</label>
+                <input type="text" id="fname" name="firstName" placeholder="Your first name..">
+            
+                <label for="lname">Last Name:</label>
+                <input type="text" id="lname" name="lastName" placeholder="Your last name..">
+            
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phoneNumber" placeholder="Your phone number..">
+            
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Your email..">
+            
+                <label for="address">Address:</label>
+                <input type="text" id="address" name="address" placeholder="Your address..">
+            
+                <label for="date">Date of Event:</label>
+                <input type="date" id="date" name="date" placeholder="Date of event..">
+            
+                <label for="event">Type of Event:</label>
+                <select id="event" name="eventType">
+                    <option value="" disabled selected>Select an Package...</option>
+                    <option value="wedding">Wedding</option>
+                    <option value="birthday">Birthday</option>
+                    <option value="corporate">Corporate Event</option>
+                    <!-- Add more options as needed -->
+                </select>
+            
+                <label for="service">Type of Package:</label>
+                <select id="service" name="serviceType" >
+                    <option value="" disabled selected>Select a Package...</option>
+                    <option value="catering">Silver</option>
+                    <option value="venue">Gold</option>
+                    <option value="decor">Diamond</option>
+                    <!-- Add more options as needed -->
+                </select>
+            
+                <label for="city">City:</label>
+                <input type="text" id="city" name="city" placeholder="Your city..">
+            
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" placeholder="Write something.."></textarea>
+            
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+        <section class="contact-info">
+            <h2 style="color:rgb(214, 55, 161);" >Call Us</h2>
+            <hr style="border-color:rgb(214, 55, 161)" class="hrr">
+            <p><a href="tel:+923088004808">+92-308-8004808</a></p>
+            
+            <h2 style="color:rgb(92, 187, 49);" >Mail Us</h2>
+            <hr style="border-color:rgb(92, 187, 49)" class="hrr">
+            <p><a href="mailto:info@belissaevents.com">info@belissaevents.com</a></p>
+           
+            <h2  style="color:rgb(209, 209, 54)">Address</h2>
+            <hr style="border-color:rgb(209, 209, 54)"class="hrr">
+            <p>Lawrence Road, Lahore</p>
+        </section>
+    </div>
+</body>
+</html>

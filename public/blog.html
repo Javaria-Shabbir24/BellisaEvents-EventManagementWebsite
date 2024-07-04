@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event Planning Blog</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <style>
+
+
+.navbar-brand img {
+      height: 40px; 
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: #000;
+      color: #fff;
+    }
+
+    header {
+      background-color: #333;
+      padding: 20px;
+      text-align: center;
+    }
+
+    main {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .blog-post {
+      background-color: #fff;
+      color: #000;
+      width: 300px;
+      padding: 20px;
+      margin: 20px;
+      border-radius: 10px;
+      text-align: center;
+    }
+
+    footer {
+      background-color: #333;
+      text-align: center;
+      padding: 10px;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+
+    img {
+      width: 100%;
+      border-radius: 5px;
+      margin-bottom: 10px;
+    }
+
+    .author {
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+
+    .read-more {
+      background-color: #333;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .read-more:hover {
+      background-color: #555;
+    }
+  </style>
+</head>
+<body>
+   <!--Navbar Code-->
+<!-- Bootstrap Navbar with dark background and dark color-->
+<nav class="navbar navbar-expand-md bg-dark navbar-dark"> 
+  <div class="container">
+    <a class="navbar-brand" href="#"><img src="Logo.png" alt="Logo"></a>
+    <!--presents the collapsed state of navbar on smaller screens-->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <!--Enables collapse behaviour-->
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="http://localhost:3000/home.html">Home</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="http://localhost:3000/AboutUs.html">About Us</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="http://localhost:3000/contact.html">Contact Us</a>
+            </li>
+        <li class="nav-item">
+          <a class="nav-link" href="http://localhost:3000/services.html">Our Services</a>
+        </li>
+        
+          <li class="nav-item">
+            <a class="nav-link" href="http://localhost:3000/packages.html">Our Packages</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="http://localhost:3000/blog.html">Blog</a>
+          </li>
+      </ul>
+    </div>  
+  </div>
+</nav>
+  <header>
+    <h1>Event Planning Blog</h1>
+  </header>
+  <main>
+    <div>
+      <video width="1200" height="500" autoplay muted loop>
+        <source src="vid1.mp4" type="video/mp4">
+    </video>
+    </div>
+    <div class="blog-post" onclick="window.location.href='B_nikah_function.html'">
+      <img src="niikah.png" alt="Image 1">
+      <h2>Nikah Function: A Complete Guide On Islamic Marriage Contract</h2>
+      <p class="author">Author: Rameesha</p>
+      
+      <button class="read-more">Read More</button>
+    </div>
+    <div class="blog-post" onclick="window.location.href='B_destination_wedding.html'">
+      <img src="destination.png" alt="Image 2">
+      <h2>The Pros and Cons of Having a Destination Wedding</h2>
+      <p class="author">Author: Rameesha</p>
+     
+      <button class="read-more">Read More</button>
+    </div>
+    <div class="blog-post" onclick="window.location.href='B_photoshoot.html'" >
+      <img src="photshoot.png" alt="Image 3">
+      <h2>Wedding Photoshoot: Where to Click Wedding Photos in Lahore?</h2>
+      <p class="author">Author: Rameesha</p>
+     
+      <button class="read-more">Read More</button>
+    </div>
+    <div class="blog-post"  onclick="window.location.href='B_birthday.html'">
+      <img src="birthday.png" alt="Image 4">
+      <h2>41 Latest Birthday Party Trends for Kids in 2023</h2>
+      <p class="author">Author: Rameesha</p>
+     
+      <button class="read-more">Read More</button>
+    </div>
+    <div class="blog-post"  onclick="window.location.href='B_unicorn.html'">
+      <img src="unicorn.png" alt="Image 5">
+      <h2>Unicorn-Themed Birthday : How To Make Fun On Birthday Party?</h2>
+      <p class="author">Author: Rameesha</p>
+     
+      <button class="read-more">Read More</button>
+    </div>
+    <div class="blog-post"  onclick="window.location.href='B_rainbow.html'">
+      <img src="rainbow.png" alt="Image 6">
+      <h2>Rainbow-Themed Birthday : How To Make Fun On Birthday Party?</h2>
+      <p class="author">Author: Rameesha</p>
+     
+      <button class="read-more">Read More</button>
+    </div>
+  </main>
+  
+</body>
+</html>

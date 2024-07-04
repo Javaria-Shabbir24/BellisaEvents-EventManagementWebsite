@@ -1,0 +1,92 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #0a0909; /* Light gray background */
+  color: #030303; /* Dark gray text color */
+}
+
+/* Container holding the image and the text */
+.header {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+/* Centered text */
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+main {
+  max-width: 800px; /* Limit content width */
+  margin: 0 auto; /* Center content horizontally */
+  padding: 20px;
+}
+
+.content {
+  background-color: #fff; /* White background for content sections */
+  padding: 20px;
+  margin-bottom: 30px; /* Add some space between sections */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Box shadow for depth */
+}
+
+.content h2, .content h3 {
+  color: #333; /* Dark gray heading color */
+}
+
+.content p {
+  margin-bottom: 15px; /* Add some space between paragraphs */
+}
+
+.intro {
+  font-style: italic; /* Italicize intro paragraph */
+}
+
+/* Comments Section */
+.comments {
+  background-color: #f9f9f9; /* Light gray background for comments section */
+  padding: 20px;
+  margin: 60px; /* Add space between comments section and other content */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Box shadow for depth */
+}
+
+.comment-input,
+.comment-name,
+.comment-email {
+  width: calc(100% - 20px); /* Take up 100% width minus padding */
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+.comment-button {
+  width: 100%;
+  padding: 10px;
+  background-color: #191a1c;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.comment-button:hover {
+  background-color: #6d7379;
+}
+
+.comment {
+  background-color: #f0f0f0; /* Light gray background for comments */
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 4px;
+}

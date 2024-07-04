@@ -1,0 +1,104 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nikah Function | Muslim Marriage Contract</title>
+  <link rel="stylesheet" href="functions_style.css">
+</head>
+<body>
+    <div class="header">
+        <img src="uni.png"  style="width:100%;">
+        <div style="color: black; font-size: 80px;" class="centered">Unicorn-Themed Birthday : How To Make Fun On Birthday Party?</div>
+    </div>
+  <main>
+    <section class="content">
+      <h2>The Magic of Unicorn-Themed Birthdays</h2>
+      <p class="intro">Unicorns! These mythical creatures have turned many celebrations into fairy tales, especially when orchestrated by a skilled event organizer.</p>
+    </section>
+    <section class="content">
+      <h3> History of Unicorns: Their Journey through Time</h3>
+      <p>From ancient tales to present-day pop culture, unicorns have always symbolized purity and Magic.</p>
+    </section>
+    <section class="content">
+      <h3>The Appeal Of Fantasy:</h3>
+      <p>It’s not just the young ones; even adults are charmed. Party planners know that unicorns resonate with childlike wonder and imagination.</p>
+    </section>
+    <section class="content">
+      <h3>Making Memories with a Birthday Party Organizer</h3>
+      <p>What sets apart a DIY birthday bash from one helmed by a professional birthday party organizer? The experience and memories crafted. While DIY parties have charm, an organizer ensures guests experience a cohesive journey from entering. Every game, every activity, every bite of food tells a story, weaving together an unforgettable narrative of Magic and wonder.</p>
+    </section>
+    <section class="content">
+      <h3>Food & Beverages:</h3>
+      <p>Ever seen a cake that looks so enchanting you doubt whether to eat it or stare? That’s the mastery a good event organizer brings in by collaborating with skilled bakers. Beverages aren’t just drinks; they’re potions and elixirs. Imagine sipping on a ‘Mystic Blue Lemonade’ that changes color when stirred or biting into a cookie that’s not just shaped like a unicorn but leaves a trail of edible glitter on your lips!</p>
+    </section>
+    <section class="content">
+      <h3>Decoding Decor With A Birthday Party Organizer</h3>
+      <p>Transforming a regular venue into a unicorn’s haven requires a special touch. It’s more than just throwing around some pastel balloons. An expert birthday party organizer knows to play with lights, fabrics, and even scents! The faint aroma of lavender combined with soft drapes, unicorn silhouettes, and a pastel-hued palette can transport guests to a different realm.</p>
+    </section>
+   
+    <section class="content">
+      <h3>Conclusion</h3>
+      <p>As celebrations end and night falls, one thing remains clear: the Magic of unicorns, especially when orchestrated by a top-notch birthday party planner, is timeless.</p>
+    </section>
+  </main>
+
+   <!-- Comment Box -->
+   <section class="comments">
+    <h3>Leave a Comment</h3>
+    <input type="text" class="comment-name" placeholder="Your Name">
+    <input type="email" class="comment-email" placeholder="Your Email">
+    <textarea class="comment-input" rows="4" placeholder="Write your comment here..."></textarea>
+    <button class="comment-button" onclick="submitComment()">Submit</button>
+  </section>
+
+  <!-- Comments Section -->
+  <section class="comments-section">
+    <h3>Comments</h3>
+    <div class="comments-container"></div>
+  </section>
+</div>
+
+  <script>function submitComment() {
+    var name = document.querySelector('.comment-name').value;
+    var email = document.querySelector('.comment-email').value;
+    var comment = document.querySelector('.comment-input').value;
+
+    // Check if all fields are filled
+    if (name.trim() === '' || email.trim() === '' || comment.trim() === '') {
+        alert('Please fill in all fields before submitting.');
+        return; // Stop the function if fields are empty
+    }
+    // Indicate that the submission process has started
+    alert('Submitting your comment...');
+
+    fetch('http://localhost:3000/send-email', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ name: name, email: email, comment: comment })
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Network response was not ok'); // Throw an error if response not OK
+        }
+        
+        return response.text();
+    })
+    .then(data => {
+        alert(data); // Show success message
+        // Clear fields after successful submission
+        document.querySelector('.comment-name').value = '';
+        document.querySelector('.comment-email').value = '';
+        document.querySelector('.comment-input').value = '';
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        alert('Failed to submit comment: ' + error.message); // Show error message
+    });
+}
+  </script>
+</body>
+</html>
