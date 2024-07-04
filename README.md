@@ -59,6 +59,21 @@ Bellisa Events is an event management website that allows users to book various 
 - List of prior events
 - Comment section with direct email to the company
 
+![image](https://github.com/Javaria-Shabbir24/BellisaEvents-EventManagementWebsite/assets/102341169/6b7e834c-3c3b-41c6-8d4e-bed23c5db881)
+
+![image](https://github.com/Javaria-Shabbir24/BellisaEvents-EventManagementWebsite/assets/102341169/05b34131-cacf-4dc9-b8e1-be40cb9efd66)
+
+![image](https://github.com/Javaria-Shabbir24/BellisaEvents-EventManagementWebsite/assets/102341169/9135c60a-28d4-4c5b-ad8b-eb906d709229)
+
+- On clicking Read More Button
+
+![image](https://github.com/Javaria-Shabbir24/BellisaEvents-EventManagementWebsite/assets/102341169/e20f3ebc-297d-4eda-9c8c-a2f7cd5815ce)
+
+![image](https://github.com/Javaria-Shabbir24/BellisaEvents-EventManagementWebsite/assets/102341169/dbd2af72-43e2-4954-b8ac-a0e7841439a0)
+
+![image](https://github.com/Javaria-Shabbir24/BellisaEvents-EventManagementWebsite/assets/102341169/d6d47c19-cbde-4a84-a175-141a090731c5)
+
+
 ### Services Page
 - Detailed information about available services
 
