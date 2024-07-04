@@ -87,6 +87,12 @@ Bellisa Events is an event management website that allows users to book various 
 ### Contact Page
 - Form to place bookings for specific events
 
+![image](https://github.com/Javaria-Shabbir24/BellisaEvents-EventManagementWebsite/assets/102341169/e2e1ec86-0287-4301-a4dc-5ceb20d497bf)
+
+![image](https://github.com/Javaria-Shabbir24/BellisaEvents-EventManagementWebsite/assets/102341169/dcc3acdb-971c-4c23-ad95-d92fc60784d9)
+
+![image](https://github.com/Javaria-Shabbir24/BellisaEvents-EventManagementWebsite/assets/102341169/98d6d309-4e2e-4af6-86f5-6a71496f0228)
+
 ## Usage
 
 1. Start the server by running the given command on terminal:
