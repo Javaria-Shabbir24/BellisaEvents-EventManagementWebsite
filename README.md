@@ -67,8 +67,6 @@ Bellisa Events is an event management website that allows users to book various 
 
 - On clicking Read More Button
 
-![image](https://github.com/Javaria-Shabbir24/BellisaEvents-EventManagementWebsite/assets/102341169/e20f3ebc-297d-4eda-9c8c-a2f7cd5815ce)
-
 ![image](https://github.com/Javaria-Shabbir24/BellisaEvents-EventManagementWebsite/assets/102341169/dbd2af72-43e2-4954-b8ac-a0e7841439a0)
 
 ![image](https://github.com/Javaria-Shabbir24/BellisaEvents-EventManagementWebsite/assets/102341169/d6d47c19-cbde-4a84-a175-141a090731c5)
@@ -76,6 +74,11 @@ Bellisa Events is an event management website that allows users to book various 
 
 ### Services Page
 - Detailed information about available services
+
+![image](https://github.com/Javaria-Shabbir24/BellisaEvents-EventManagementWebsite/assets/102341169/8d4431da-7703-4344-bd5f-666d929e2017)
+
+![image](https://github.com/Javaria-Shabbir24/BellisaEvents-EventManagementWebsite/assets/102341169/9c05f611-8235-4ded-b283-239381a8f7a2)
+
 
 ### Packages Page
 - List of packages with prices and perks
