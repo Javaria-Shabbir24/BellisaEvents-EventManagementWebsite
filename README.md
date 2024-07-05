@@ -116,7 +116,7 @@ Bellisa Events is an event management website that allows users to book various 
 
 ## Contributing
 
-Contributions are welcome! 
+Contributions are welcome! We would be happy to receive contributions from you. 
 
 ## Feedback
 Your feedback is valued! If you have any suggestions, issues, or comments, please feel free to reach out. 
