@@ -5,15 +5,18 @@ Bellisa Events is an event management website that allows users to book various 
 ## Technologies Used
 
 ### Frontend
+
 - HTML
 - CSS
 - Bootstrap
 
 ### Backend
+
 - Node.js
 - Express.js
 
 ### Database
+
 - MongoDB
 
 ## Features
