@@ -2,6 +2,7 @@
 
 Bellisa Events is an event management website that allows users to book various events effortlessly. The website is designed with a user-friendly interface and is fully responsive, ensuring a seamless experience across different devices.
 
+
 ## Technologies Used
 
 ### Frontend
